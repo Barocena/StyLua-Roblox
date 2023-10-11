@@ -1,0 +1,3 @@
+no_call_parentheses = true
+[sort_requires]
+enabled = true
