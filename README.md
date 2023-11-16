@@ -4,8 +4,6 @@ StyLua Roblox Plugin
 </h1>
 </div>
 
----
-
 [StyLua](https://github.com/JohnnyMorganz/StyLua) roblox plugin is a formatter made for roblox studio.
 Since implementing StyLua directly in the studio is not possible, it sends the code to the local webserver and gets formatted output back instead.
 
@@ -17,7 +15,7 @@ Since implementing StyLua directly in the studio is not possible, it sends the c
 - Install the [plugin](https://create.roblox.com/marketplace/asset/15035645978/StyLua-Plugin)
 
 ### Manual Installation
-##### Installing with GitHub releases and roblox marketplace is recommended
+###### Installing with GitHub releases and roblox marketplace is recommended
 
 #### Requirements
 - [git](https://git-scm.com/downloads)
