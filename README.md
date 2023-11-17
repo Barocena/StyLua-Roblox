@@ -37,8 +37,8 @@ Since implementing StyLua directly in the studio is not possible, it sends the c
 
 Once installed, you can run the program and use the plugin on Studio, Program needs to run while you using the plugin.
 
-To Format, click the StyLua button or bind a shortcut from shortcut settings.
-Formatting with a script editor open will format the current script.
+To Format, click the StyLua button or bind a shortcut from shortcut settings.<br>
+Formatting with a script editor open will format the current script.<br>
 To format multiple scripts, you can close the script editor and select the scripts you want to format from Explorer and format.
 
 To Change the Configuration of StyLua, Click the Open Settings Button.
