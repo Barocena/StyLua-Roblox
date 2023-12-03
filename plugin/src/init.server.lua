@@ -176,6 +176,9 @@ function formatter(script)
 			warn(`[StyLua] {body:match("<pre>(.-)</pre>"):gsub("&#39;", "'"):gsub("<br>", "\n"):sub(1, -1)}`)
 		end
 	else
+		if ScriptEditorService:GetEditorSource(script) == result.Body then
+			return
+		end
 		ScriptEditorService:UpdateSourceAsync(script, function()
 			return result.Body
 		end)
