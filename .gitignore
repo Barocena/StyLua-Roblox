@@ -1,9 +1,8 @@
-# Created by https://www.toptal.com/developers/gitignore/api/node
-# Edit at https://www.toptal.com/developers/gitignore?templates=node
-
 # Plugin model files
 /Plugin.rbxmx
 /Plugin.rbxm
+*.d.lua
+*.exe
 
 # Todo list
 /TODO.md
