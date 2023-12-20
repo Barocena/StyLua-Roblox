@@ -9,6 +9,7 @@ local ScriptEditorService = game:GetService("ScriptEditorService")
 local StudioService = game:GetService("StudioService")
 local ChangeHistoryService = game:GetService("ChangeHistoryService")
 local Selection = game:GetService("Selection")
+local ServerStorage = game:GetService("ServerStorage")
 
 assert(plugin, "This code must run inside of a plugin")
 
@@ -81,7 +82,7 @@ end
 
 function validateSettings(Module)
 	local Settings
-	local result, _: any = loadstring(Module.Source)
+	local result: any, _: any = loadstring(Module.Source)
 	if result == nil then
 		return false
 	end
@@ -144,17 +145,37 @@ function openSettings()
 	plugin:OpenScript(Module)
 end
 
+function fetchSettings()
+	local Config = {}
+
+	-- Place Only Settings
+	local PlaceSetting = ServerStorage:FindFirstChild("StyLua")
+	if PlaceSetting and PlaceSetting:IsA("LuaSourceContainer") then
+		local PlaceConfig = validateSettings(PlaceSetting)
+		if PlaceConfig then
+			for setting, value in PlaceConfig :: any do
+				if value ~= ConfigInfo[setting].DefaultValue then
+					Config[setting] = value
+				end
+			end
+		end
+		return Config
+	end
+
+	--Global Settings
+	for setting, value in plugin:GetSetting("StyLuaSettings") do
+		if value ~= ConfigInfo[setting].DefaultValue then
+			Config[setting] = value
+		end
+	end
+	return Config
+end
+
 local FormatAction =
 	plugin:CreatePluginAction("StyLua Format", "Format", "Formats the code", "rbxassetid://15177733701", true)
 
 function formatter(script)
-	local ConfigJSON = {}
-
-	for setting, value in plugin:GetSetting("StyLuaSettings") do
-		if value ~= ConfigInfo[setting].DefaultValue then
-			ConfigJSON[setting] = value
-		end
-	end
+	local ConfigJSON = fetchSettings()
 
 	local success, result = pcall(HttpService.RequestAsync, HttpService, {
 		Method = "POST" :: "POST",
