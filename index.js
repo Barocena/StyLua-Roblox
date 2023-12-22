@@ -6,8 +6,8 @@ const ConsoleWindow = require("node-hide-console-window");
 const fs = require("fs");
 const path = require("path");
 
-// StyLua Roblox Plugin
-// Version 1.0.0
+// StyLua Roblox
+// Version 1.1.0
 
 const EnumList = {
   ["call_parentheses"]: StyLua.CallParenType,
