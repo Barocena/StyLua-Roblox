@@ -1,17 +1,17 @@
 <div align="center">
+<img src="./assets/icon.ico">
 <h1>
-StyLua Roblox Plugin
+StyLua Roblox
 </h1>
 </div>
 
 [StyLua](https://github.com/JohnnyMorganz/StyLua) roblox plugin is a formatter made for roblox studio.
-Since implementing StyLua directly in the studio is not possible, it sends the code to the local webserver and gets formatted output back instead.
 
 ## Installation
 
 ### With GitHub Releases & Roblox Marketplace
 
-- Download the `StyLua-Plugin.exe` from [latest release](github.com/Barocena/StyLua-Roblox-Plugin/releases/latest)
+- Download the `StyLua-Roblox` from [latest release](github.com/Barocena/StyLua-Roblox-Plugin/releases/latest)
 - Install the [plugin](https://create.roblox.com/marketplace/asset/15035645978/StyLua-Plugin)
 
 ### Manual Installation
@@ -41,5 +41,8 @@ To Format, click the StyLua button or bind a shortcut from shortcut settings.<br
 Formatting with a script editor open will format the current script.<br>
 To format multiple scripts, you can close the script editor and select the scripts you want to format from Explorer and format.
 
-To Change the Configuration of StyLua, Click the Open Settings Button.
+To Change the Configuration of StyLua, Click the Open Settings Button.<br>
 more info about options and what it does can be found [here](https://github.com/JohnnyMorganz/StyLua?tab=readme-ov-file#options)
+
+To Create Place-only Settings, Add a module named `StyLua` (case-sensitive) to ServerStorage.<br>
+Copy the Settings from Open Settings menu and paste it in, plugin will use these settings
