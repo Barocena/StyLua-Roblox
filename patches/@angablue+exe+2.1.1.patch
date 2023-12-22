@@ -1,0 +1,13 @@
+diff --git a/node_modules/@angablue/exe/dist/index.js b/node_modules/@angablue/exe/dist/index.js
+index 4c3eabc..5f76777 100644
+--- a/node_modules/@angablue/exe/dist/index.js
++++ b/node_modules/@angablue/exe/dist/index.js
+@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
+     });
+ };
+ const fs_1 = require("fs");
+-const pkg_1 = require("pkg");
++const pkg_1 = require("@yao-pkg/pkg");
+ const cjs_1 = require("resedit/cjs");
+ // Language code for en-us and encoding codepage for UTF-16
+ const language = {

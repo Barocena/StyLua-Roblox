@@ -54,17 +54,13 @@ app.listen(18259, () => {
 
 Tray.create(
   {
-    useTempDir: "clean",
-
     icon: fs.readFileSync(
       path.join(path.dirname(__filename), "assets/icon.ico")
     ),
     title: "StyLua",
   },
   function (tray) {
-    tray.setMenu(
-      tray.item("Quit", () => process.exit(0))
-    );
+    tray.setMenu(tray.item("Quit", () => process.exit(0)));
   }
 );
 

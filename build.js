@@ -1,16 +1,19 @@
-const { compile } = require("nexe");
+const exe = require("@angablue/exe");
 
-compile({
-  input: "./index.js",
-  output: "StyLua-Roblox.exe",
-  build: true,
-  verbose: true,
-  resources: "assets/icon.ico",
-  rc: {
-    FileDescription: "StyLua Roblox Plugin",
-    ProductName: "StyLua Roblox Plugin",
-    LegalCopyright: "https://github.com/Barocena/StyLua-Roblox-Plugin",
+const build = exe({
+  entry: "package.json",
+  out: "./out/StyLua-Roblox.exe",
+  version: "1.0.0",
+  target: "node20-win-x64",
+  icon: "./assets/icon.ico",
+  pkg: ["-C","Brotli"],
+  executionLevel: "asInvoker",
+  properties: {
+    FileDescription: "StyLua Roblox",
+    ProductName: "StyLua Roblox",
+    LegalCopyright: "https://github.com/Barocena/StyLua-Roblox",
+    OriginalFilename: "StyLua-Roblox.exe",
   },
-})
-  .then(() => console.log("Build completed!"))
-  .catch(console.error);
+});
+
+build.then(() => console.log("Build completed!"));

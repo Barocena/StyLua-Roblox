@@ -1,0 +1,31 @@
+diff --git a/node_modules/trayicon/index.js b/node_modules/trayicon/index.js
+index 00a712e..653db9f 100644
+--- a/node_modules/trayicon/index.js
++++ b/node_modules/trayicon/index.js
+@@ -8,12 +8,22 @@ const EventEmitter = require('events');
+ 
+ const debug = require('debug');
+ 
+-const {spawn} = require('child_process');
+-
++const { spawn,execSync } = require('child_process');
+ const {escapeXML, attrs, defer, uuid, md5} = require('./utils');
+ 
+-const DEFAULT_ICON_PATH = path.resolve(__dirname, 'rsrcs', 'default.ico');
+-const TRAYAPP_PATH      = path.resolve(__dirname, 'rsrcs', 'trayicon.exe');
++const DEFAULT_ICON_PATH = path.join(__dirname,"rsrcs/default.ico")//path.resolve(__dirname, 'rsrcs', 'default.ico');
++var TRAYAPP_PATH = path.join(__dirname, "rsrcs/trayicon.exe")//path.resolve(__dirname, 'rsrcs', 'trayicon.exe');
++
++if (process.pkg) {
++  // creating a temporary folder for our executable file
++  const destination = fs.mkdtempSync(`${os.tmpdir()}${path.sep}`);
++  const destinationPath = path.join(destination, "trayicon.exe");
++  TRAYAPP_PATH = destinationPath;
++  // copy the executable file into the temporary folder
++  fs.copyFileSync(path.join(__dirname, "rsrcs/trayicon.exe"), destinationPath);
++}
++
++
+ 
+ //const TRAYAPP_PATH      = path.resolve(__dirname, 'src/bin/Debug/trayicon.exe');
+ 
