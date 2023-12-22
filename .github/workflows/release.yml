@@ -52,7 +52,7 @@ jobs:
 
       - name: Build Plugin
         run: rojo build plugin -o Plugin.rbxm
-        
+
       - name: Upload artifacts
         uses: actions/upload-artifact@v3
         with:
@@ -68,7 +68,7 @@ jobs:
           asset_path: Plugin.rbxm
           asset_name: Plugin.rbxm
           asset_content_type: application/octet-stream
-          
+
   build-exe:
     runs-on: windows-latest
     needs: ["create-release"]
@@ -85,11 +85,15 @@ jobs:
       - name: Build Binary
         run: node build.js
 
+      - name: Archive the Binary
+        shell: Bash
+        run: 7z a StyLua-Roblox.zip StyLua-Roblox.exe
+
       - name: Upload Binary Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: StyLua-Roblox.exe
-          path: StyLua-Roblox.exe
+          name: StyLua-Roblox.zip
+          path: StyLua-Roblox.zip
 
       - name: Upload release assets to GitHub
         uses: actions/upload-release-asset@v1
@@ -97,6 +101,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.create-release.outputs.upload_url }}
-          asset_path: StyLua-Roblox.exe
-          asset_name: StyLua-Roblox.exe
+          asset_path: StyLua-Roblox.zip
+          asset_name: StyLua-Roblox.zip
           asset_content_type: application/octet-stream

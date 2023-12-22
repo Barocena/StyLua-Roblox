@@ -3,6 +3,7 @@
 /Plugin.rbxm
 *.d.lua
 *.exe
+*.zip
 
 # Todo list
 /TODO.md
