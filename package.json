@@ -7,7 +7,7 @@
   "scripts": {
     "postinstall": "patch-package",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pkg": "pkg package.json -t node20-win-x64"
+    "build": "node build.js"
   },
   "pkg": {
     "scripts": "index.js",
