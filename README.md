@@ -11,7 +11,7 @@ StyLua Roblox
 
 ### With GitHub Releases & Roblox Marketplace
 
-- Download the `StyLua-Roblox` from [latest release](github.com/Barocena/StyLua-Roblox/releases/latest)
+- Download the `StyLua-Roblox` from [GitHub Releases Page](https://github.com/Barocena/StyLua-Roblox/releases).
 - Install the [plugin](https://create.roblox.com/marketplace/asset/15035645978/StyLua-Plugin)
 
 ### Manual Installation
