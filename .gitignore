@@ -1,9 +1,10 @@
-# Plugin model files
+# StyLua-Roblox 
 /Plugin.rbxmx
 /Plugin.rbxm
 *.d.lua
 *.exe
 *.zip
+ignore
 
 # Todo list
 /TODO.md
