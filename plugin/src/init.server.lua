@@ -62,7 +62,7 @@ end
 
 function generateSettings()
 	local Settings = plugin:GetSetting("StyLuaSettings")
-	local Output = "-- Stylua Configuration\nreturn {\n\n"
+	local Output = "-- StyLua Configuration\nreturn {\n\n"
 	for CName, CValue in Settings do
 		Output = Output
 			.. "\t"
