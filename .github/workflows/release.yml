@@ -85,15 +85,11 @@ jobs:
       - name: Build Binary
         run: node build.js
 
-      - name: Archive the Binary
-        shell: Bash
-        run: 7z a StyLua-Roblox.zip StyLua-Roblox.exe
-
       - name: Upload Binary Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: StyLua-Roblox.zip
-          path: StyLua-Roblox.zip
+          name: StyLua-Roblox.exe
+          path: StyLua-Roblox.exe
 
       - name: Upload release assets to GitHub
         uses: actions/upload-release-asset@v1
@@ -101,6 +97,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.create-release.outputs.upload_url }}
-          asset_path: StyLua-Roblox.zip
-          asset_name: StyLua-Roblox.zip
+          asset_path: StyLua-Roblox.exe
+          asset_name: StyLua-Roblox.exe
           asset_content_type: application/octet-stream
