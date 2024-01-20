@@ -22,7 +22,7 @@
   "license": "ISC",
   "dependencies": {
     "@angablue/exe": "^2.1.1",
-    "@johnnymorganz/stylua": "^0.19.0",
+    "@johnnymorganz/stylua": "^0.20.0",
     "@yao-pkg/pkg": "^5.11.0",
     "express": "^4.18.2",
     "node-hide-console-window": "^2.2.0",
