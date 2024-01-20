@@ -47,7 +47,7 @@ jobs:
         run: curl -s -O https://raw.githubusercontent.com/JohnnyMorganz/luau-lsp/master/scripts/globalTypes.d.luau
 
       - name: Run Luau Analyze
-        run: luau-lsp analyze --sourcemap=sourcemap.json --defs=../globalTypes.d.lua --no-strict-dm-types src
+        run: luau-lsp analyze --sourcemap=sourcemap.json --defs=../globalTypes.d.luau --no-strict-dm-types src
         working-directory: plugin
 
       - name: Build Plugin
