@@ -46,6 +46,10 @@ local ConfigInfo = {
 		DefaultValue = "Never",
 		Options = "Never, FunctionOnly, ConditionalOnly, Always",
 	},
+	space_after_function_names = {
+		DefaultValue = "Never",
+		Options = "Never, Definitons, Calls, Always",
+	},
 	sort_requires = {
 		DefaultValue = false,
 		Options = "<boolean>",

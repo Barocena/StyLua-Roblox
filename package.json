@@ -22,11 +22,12 @@
   "license": "ISC",
   "dependencies": {
     "@angablue/exe": "^2.1.1",
-    "@johnnymorganz/stylua": "^0.20.0",
+    "@johnnymorganz/stylua": "^2.1.0",
     "@yao-pkg/pkg": "^5.11.0",
     "express": "^4.18.2",
     "node-hide-console-window": "^2.2.0",
     "patch-package": "^8.0.0",
     "trayicon": "^1.2.2"
-  }
+  },
+  "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0"
 }
