@@ -23,12 +23,12 @@ jobs:
       - name: Determine tag name
         id: tag_name
         run: |
-          if [ -n "${{ github.event.inputs.tag }}" ]; then
-            echo "tag=${{ github.event.inputs.tag }}" >> $GITHUB_OUTPUT
-          else
-            # Strip refs/tags/ prefix from github.ref
-            echo "tag=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+          TAG="${{ github.event.inputs.tag }}"
+          if [ -z "$TAG" ]; then
+            TAG="${GITHUB_REF#refs/tags/}"
           fi
+          TAG="${TAG#refs/tags/}"
+          echo "tag=$TAG" >> $GITHUB_OUTPUT
 
       - name: Create Release
         id: create_release
