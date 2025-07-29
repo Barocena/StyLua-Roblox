@@ -72,7 +72,7 @@ jobs:
         run: rojo build plugin -o StyluaRobloxPlugin.rbxm
 
       - name: Upload artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: StyluaRobloxPlugin.rbxm
           path: StyluaRobloxPlugin.rbxm
@@ -104,7 +104,7 @@ jobs:
         run: node build.js
 
       - name: Upload Binary Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: StyLua-Roblox.exe
           path: StyLua-Roblox.exe
