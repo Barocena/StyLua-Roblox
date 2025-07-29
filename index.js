@@ -7,7 +7,7 @@ const fs = require("fs");
 const path = require("path");
 
 // StyLua Roblox
-// Version 1.1.0
+// Version 1.3.0
 
 const EnumList = {
   ["call_parentheses"]: StyLua.CallParenType,

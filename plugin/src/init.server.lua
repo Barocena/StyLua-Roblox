@@ -1,7 +1,7 @@
 --!strict
 
 -- StyLua Roblox
--- Version 1.1.0
+-- Version 1.3.0
 
 local AnalyticsService = game:GetService("AnalyticsService")
 local HttpService = game:GetService("HttpService")

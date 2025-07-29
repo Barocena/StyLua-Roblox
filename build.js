@@ -3,7 +3,7 @@ const exe = require("@angablue/exe");
 const build = exe({
   entry: "package.json",
   out: "StyLua-Roblox.exe",
-  version: "1.1.0",
+  version: "1.3.0",
   target: "node20-win-x64",
   icon: "./assets/icon.ico",
   pkg: ["-C","Brotli"],
